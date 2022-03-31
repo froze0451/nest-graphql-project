@@ -1,6 +1,7 @@
 ## Description
 
 NestJS + MongoDB + GraphQL api example
+Inclues some validation, data transformation and custom exceptions
 
 ## Installation
 
