@@ -1,0 +1,89 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CreateGroupDto {
+  id: ID!
+  name: String!
+  description: String!
+  type: String!
+  followers: [UserShare!]!
+}
+
+type GroupShare {
+  id: String!
+  name: String!
+  description: String!
+  type: String!
+}
+
+type CreateUserDto {
+  id: ID!
+  name: String!
+  age: Int!
+  friends: [UserShare!]!
+  groups: [GroupShare!]!
+}
+
+type UserShare {
+  id: String!
+  name: String!
+  age: Float!
+}
+
+type Query {
+  getUser(input: BaseUserInput!): CreateUserDto!
+  getAllUsers: [CreateUserDto!]!
+  getAllGroups: [CreateGroupDto!]!
+  getGroup(input: BaseGroupInput!): CreateGroupDto!
+}
+
+input BaseUserInput {
+  userId: String!
+}
+
+input BaseGroupInput {
+  userId: String!
+  groupId: String!
+}
+
+type Mutation {
+  createUser(input: UserCreateInput!): CreateUserDto!
+  addFriend(input: UserDeleteInput!): CreateUserDto!
+  followGroup(input: BaseGroupInput!): CreateUserDto!
+  deleteUser(input: BaseUserInput!): CreateUserDto!
+  editUser(input: UserEditInput!): CreateUserDto!
+  createGroup(input: GroupCreateInput!): CreateGroupDto!
+  editGroup(input: EditGroupInput!): CreateGroupDto!
+  deleteGroup(input: BaseGroupInput!): CreateGroupDto!
+}
+
+input UserCreateInput {
+  name: String!
+  age: Int!
+}
+
+input UserDeleteInput {
+  userId: String!
+  friendId: String!
+}
+
+input UserEditInput {
+  userId: String!
+  name: String!
+  age: Int!
+}
+
+input GroupCreateInput {
+  name: String!
+  description: String!
+  type: String!
+}
+
+input EditGroupInput {
+  userId: String!
+  groupId: String!
+  name: String!
+  description: String!
+  type: String!
+}
