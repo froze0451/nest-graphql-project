@@ -15,7 +15,7 @@ $ yarn run start
 ```bash
 $ npm run start
 #or
-$ yarn
+$ yarn run start
 ```
 
 ## GraphQL Playground
