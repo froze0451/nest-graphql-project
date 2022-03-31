@@ -7,7 +7,7 @@ NestJS + MongoDB + GraphQL api example. Includes some validation, data transform
 ```bash
 $ npm install
 #or
-$ yarn
+$ yarn run start
 ```
 
 ## Running the app
