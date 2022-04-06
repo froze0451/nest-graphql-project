@@ -6,7 +6,7 @@ NestJS + MongoDB + GraphQL api example. Includes some validation, data transform
 
 You can add user to another as a friend and also follow groups.<br>
 There are also many crud methods to use.<br>
-If you choose to delete user or group - all they relations with friends/groups will update accordingly.
+If you choose to delete/edit user or group - all they relations with friends/groups will update accordingly.
 
 ## Installation
 
