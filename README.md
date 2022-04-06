@@ -13,7 +13,7 @@ If you choose to delete user or group - all they relations with friends/groups w
 ```bash
 $ npm install
 #or
-$ yarn run start
+$ yarn
 ```
 
 ## Running the app
